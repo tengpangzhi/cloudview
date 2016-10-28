@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rlCloudImageBag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/ivLoadBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:background="@drawable/cloud_bg"/>
+
+        <!-- 大轮 -->
+        <ImageView
+            android:id="@+id/ivScroll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lun_1"/>
+        <!-- 中轮 -->
+        <ImageView
+            android:id="@+id/ivScroll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lun_2"/>
+        <!-- 小轮 -->
+        <ImageView
+            android:id="@+id/ivScroll3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lun_3"/>
+        <!-- 小轮 -->
+        <ImageView
+            android:id="@+id/ivScroll4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lun_3"/>
+    </RelativeLayout>
+
+

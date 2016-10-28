@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="CloudView">
+        <!--所有图片放大缩小的百分比-->
+        <attr name="image_percent" format="float"/>
+        </declare-styleable>
+
+</resources>
