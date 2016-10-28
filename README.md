@@ -6,12 +6,12 @@
 <img src="screenshot/code.png" >
 
 ## 效果图
-<img src="screenshot/cloudview.png" >
+<img src="screenshot/cloudview.gif" >
 
 ----
 ### 关于作者
 公众号（欢迎关注骚扰）
 一位胖纸的自我修养
-<img src="screenshot/qrcode.png">
+<img src="screenshot/qrcode.jpg">
 * Email： <2740425104@qq.com>
 * 有任何建议或者使用中遇到问题都可以给我发邮件
