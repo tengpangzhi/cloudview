@@ -8,6 +8,36 @@
 ## 效果图
 <img src="screenshot/cloudview.gif" >
 
+## 使用方法
+...
+allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
+...
+
+...
+dependencies {
+	        compile 'com.github.tengpangzhi:cloudview:v1.0'
+	}
+...
+
+*使用弹出加载框
+...
+CloudProgressDialog cloudProgressDialog = new CloudProgressDialog(LoginActivity.this,"loading.......");
+cloudProgressDialog.show();
+...
+
+*使用云动画view
+...
+<com.tengpangzhi.cloudview.CloudView
+        android:id="@+id/cvDialogLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		tools:sizePersent="0.5"/>
+...
 ----
 ### 关于作者
 * 公众号（欢迎关注骚扰）一位胖纸的自我修养
