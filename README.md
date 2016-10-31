@@ -9,6 +9,7 @@
 <img src="screenshot/cloudview.gif" >
 
 ## 使用方法
+* 添加依赖
 ```
 allprojects {
 		repositories {
