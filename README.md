@@ -38,6 +38,9 @@ cloudProgressDialog.show();
         android:layout_height="wrap_content"
 		tools:sizePersent="0.5"/>
 ```
+
+v1.0.1
+增加自定义背景设置
 ----
 ### 关于作者
 * 公众号（欢迎关注骚扰）一位胖纸的自我修养
