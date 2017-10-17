@@ -1,8 +1,12 @@
 package com.tengpangzhi.cloudview;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
@@ -31,6 +35,7 @@ public class CloudView extends LinearLayout {
     private ImageView mIvScroll4;// 右小轮
 
     private float sizePersent;//图片放大缩小的百分比
+    private int tintColor;
 
     public CloudView(Context context) {
         super(context);
@@ -57,6 +62,7 @@ public class CloudView extends LinearLayout {
         TypedArray typedArray = mCtx.obtainStyledAttributes(mAttr, R.styleable.CloudView);
 
         sizePersent = typedArray.getFloat(R.styleable.CloudView_image_percent, 1f);
+        tintColor = typedArray.getColor(R.styleable.CloudView_tint_color, -1);
         uiInitView();
     }
 
@@ -88,8 +94,11 @@ public class CloudView extends LinearLayout {
         linearParams.height = cloudImageheight;
         mRlCloudImageBag.setLayoutParams(linearParams);
 
-
-//动态设置轮1大小
+        //给背景着色
+        if (tintColor != -1) {
+            mIvLoadBg.setBackground(tintDrawable(mIvLoadBg.getBackground(),ColorStateList.valueOf(tintColor)));
+        }
+        //动态设置轮1大小
         mIvScroll1.measure(w, h);
         int scoll1width = Math.round(mIvScroll1.getMeasuredWidth() * sizePersent);//获取轮1的宽
         int scoll1height = Math.round(mIvScroll1.getMeasuredHeight() * sizePersent);//获取轮1的高
@@ -199,6 +208,12 @@ public class CloudView extends LinearLayout {
                 R.anim.unclockwisec_rotate);
         operatingAnim4.setInterpolator(lin);
         mIvScroll4.startAnimation(operatingAnim4);
+    }
+
+    public static Drawable tintDrawable(Drawable drawable, ColorStateList colors) {
+        final Drawable wrappedDrawable = DrawableCompat.wrap(drawable);
+        DrawableCompat.setTintList(wrappedDrawable, colors);
+        return wrappedDrawable;
     }
 
 }

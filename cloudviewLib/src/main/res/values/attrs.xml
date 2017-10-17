@@ -4,6 +4,7 @@
     <declare-styleable name="CloudView">
         <!--所有图片放大缩小的百分比-->
         <attr name="image_percent" format="float"/>
+        <attr name="tint_color" format="color"/>
         </declare-styleable>
 
 </resources>
